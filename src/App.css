@@ -57,6 +57,7 @@ h3, .alive, .dead, p {
 .alive, .dead {
   position: relative;
   left: 15px;
+  font-size: large;
 }
 
 .alive::before {
