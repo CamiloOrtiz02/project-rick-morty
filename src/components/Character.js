@@ -6,7 +6,7 @@ export default function Character(props){
     return(
         <div className="container">
             <h2>Personajes</h2>
-            <span onClick={resetCharacters}>Volver al home</span>
+            <span onClick={resetCharacters} className="back-home">Volver al home</span>
             <div className="character-container">
                 {characters.map((character, index) => (
                     <div className="character-info" key={index}>
@@ -39,7 +39,7 @@ export default function Character(props){
                     </div>
                 ))}
             </div>
-            <span onClick={resetCharacters}>Volver al home</span>
+            <span onClick={resetCharacters} className="back-home">Volver al home</span>
         </div>
     );
 }

@@ -2,6 +2,23 @@ h3, .alive, .dead, p {
   color: white;
 }
 
+.btnSearchCharacter {
+  background-color: rgb(64, 241, 76);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  height: 30px;
+
+}
+
+.back-home {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .container, .App {
   display: flex;
   flex-direction: column;
@@ -26,7 +43,7 @@ h3, .alive, .dead, p {
 
 .character-info {
   width: 550px;
-  max-width: 100%;
+  max-width: 100vw;
   border: #fff 1px solid;
   display: grid;
   grid-template-columns: 1fr 1fr;
