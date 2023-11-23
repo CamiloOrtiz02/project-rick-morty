@@ -4,14 +4,14 @@ export default function Character(props){
         setCharacters(null);
     }
     return(
-        <div>
-            <h1>Personajes</h1>
+        <div className="container">
+            <h2>Personajes</h2>
             <span onClick={resetCharacters}>Volver al home</span>
-            <div>
+            <div className="character-container">
                 {characters.map((character, index) => (
-                    <div key={index}>
+                    <div className="character-info" key={index}>
                         <div>
-                            <img src={character.image} alt={character.name} />
+                            <img className="character-img" src={character.image} alt={character.name} />
                         </div>
                         <div>
                             <h3>{character.name}</h3>
@@ -19,20 +19,20 @@ export default function Character(props){
                                 {character.status === "Alive" ? 
                                     (
                                         <>
-                                            <span>Alive</span>
+                                            <span className="alive">Alive</span>
                                         </>
                                     ) :
                                     (
                                         <>
-                                            <span>Dead</span>
+                                            <span className="dead">Dead</span>
                                         </>
                                     )
                                 }
                             </h6>
-                            <p>
+                            <p className="text-grey">
                                 Episodios: <span>{character.episode.length}</span>
                             </p>
-                            <p>
+                            <p className="text-grey">
                                 Especie: <span>{character.species}</span>
                             </p>
                         </div>

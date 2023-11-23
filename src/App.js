@@ -28,7 +28,7 @@ function App() {
       ) : (
         //Cargar inicio
         <>
-          <img src={imgRickMorty} alt="imagen_rick_morty.png"/>
+          <img className="imgRickMorty" src={imgRickMorty} alt="imagen_rick_morty.png"/>
           <button onClick={reqApi}>Buscar Personajes</button>
         </>
       )}

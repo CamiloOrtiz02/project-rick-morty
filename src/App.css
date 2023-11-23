@@ -1,45 +1,66 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h3, .alive, .dead, p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container, .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-img {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: auto;
+.imgRickMorty {
+  width: 400px;
 }
+
+.character-img {
+  width: 100%;
+  height: 100%;
+}
+
+.character-info {
+  width: 550px;
+  max-width: 100%;
+  border: #fff 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #393838;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.alive, .dead {
+  position: relative;
+  left: 15px;
+}
+
+.alive::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-150%);
+  background-color: greenyellow;
+}
+
+.dead::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-150%);
+  background-color: red;
+}
+
